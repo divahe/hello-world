@@ -2,41 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="styles.css" rel="stylesheet">
     <title>Title</title>
 </head>
 <body>
 
-<img src="https://www.ttu.ee/public/u/ulikool/Tunnusgraafika/TalTech_Gradient_veeb.jpg" alt="TalTech" height="50" width="55" ID="logo1">
-<header>{{$transl['enter']}}</header>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+<img src="https://www.ttu.ee/public/u/ulikool/Tunnusgraafika/TalTech_Gradient_veeb.jpg" alt="TalTech" height="50"
+     width="50" ID="logo1">
+<nav>
+    <a href="add.html">LISA</a>
+    <a href="list.html">NIMEKIRI</a>
+</nav>
 <br>
+<table class="general">
+    <tbody>
+    <tr>
+        <th scope="col">Eesnimi</th>
+        <th scope="col">Perekonnanimi</th>
+        <th scope="col">Telefon</th>
+    </tr>
+    <tr>
+        <td><label for="firstname">
+            <input type="text" id="firstname" name="Eesnimi">
+        </label></td>
+        <td><label for="lastname">
+            <input type="text" id="lastname" name="Perekonnanimi">
+        </label></td>
+        <td><label>
+            <input type="tel" name="Telefon">
+        </label></td>
+    </tr>
+    <tr>
+        <td colspan="3"><input type="submit" id="button" value="Salvesta"></td>
+    </tr>
+    </tbody>
+</table>
+
+
 <br>
-<br>
-<span id='error-block' tpl-if="$message">{{ $message }}</span>
-
-<form method="post" action="?cmd=login">
-
-
-    <div class="groupInput">
-        <label for="username">{{$transl['user']}}</label><br/>
-        <input value='{{ $unValue }}' type="text" id="username" name="username"></div>
-    <div class="groupInput">
-        <label for="password">{{$transl['psw']}}</label><br/>
-        <input value='{{ $pswValue }}' type="text" id="password" name="password"></div>
-
-    <br>
-    <br>
-    <input name="loginButton" type="submit" id="loginButton" value={{$transl['login']}}>
-</form>
-
 <br>
 <footer>
-    <div id="lang-links">  {{$transl['footer1']}}&nbsp;&nbsp;&nbsp;{{$transl['footer2']}}&nbsp;&nbsp;
-        <a href="?cmd={{$cmd}}&language=et" id="lang-et-link">{{$transl['est']}}</a>&nbsp;&nbsp;&nbsp;
-        <a href="?cmd={{$cmd}}&language=en" id="lang-en-link">{{$transl['eng']}}</a>
-    </div>
+    Minu esimene veebileht "Veebitehnoloogiad 2020"
 </footer>
 
 
+</body>
+</html>
+File contacts/list.html ADDED
+Side-by-side diff View file Comment More
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet">
+    <title>List of the data</title>
+</head>
+<body>
+<img src="https://www.ttu.ee/public/u/ulikool/Tunnusgraafika/TalTech_Gradient_veeb.jpg" alt="TalTech" height="50"
+     width="50" ID="logo1">
+<nav>
+    <a href="add.html">LISA</a>
+    <a href="list.html">NIMEKIRI</a>
+</nav>
+<br>
+<table class="general">
+    <thead>
+    <tr>
+        <td class="header">Eesnimi</td>
+        <td class="header">Perekonnanimi</td>
+        <td class="header">Telefon</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Mari</td>
+        <td>Kask
+        <td>5522769</td>
+    </tr>
+    <tr>
+        <td>Mihkel</td>
+        <td>Tammsaare</td>
+        <td>5311672</td>
+    </tr>
+    <tr>
+        <td>Kerttu</td>
+        <td>Tuulepea</td>
+        <td>574470112</td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<footer>
+    Minu esimene veebileht "Veebitehnoloogiad 2020"
+</footer>
 </body>
 </html>
