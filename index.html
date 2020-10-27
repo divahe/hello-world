@@ -1,18 +1,42 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet">
+    <title>Title</title>
 </head>
-
 <body>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+<img src="https://www.ttu.ee/public/u/ulikool/Tunnusgraafika/TalTech_Gradient_veeb.jpg" alt="TalTech" height="50" width="55" ID="logo1">
+<header>{{$transl['enter']}}</header>
+<br>
+<br>
+<br>
+<span id='error-block' tpl-if="$message">{{ $message }}</span>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
+<form method="post" action="?cmd=login">
+
+
+    <div class="groupInput">
+        <label for="username">{{$transl['user']}}</label><br/>
+        <input value='{{ $unValue }}' type="text" id="username" name="username"></div>
+    <div class="groupInput">
+        <label for="password">{{$transl['psw']}}</label><br/>
+        <input value='{{ $pswValue }}' type="text" id="password" name="password"></div>
+
+    <br>
+    <br>
+    <input name="loginButton" type="submit" id="loginButton" value={{$transl['login']}}>
+</form>
+
+<br>
+<footer>
+    <div id="lang-links">  {{$transl['footer1']}}&nbsp;&nbsp;&nbsp;{{$transl['footer2']}}&nbsp;&nbsp;
+        <a href="?cmd={{$cmd}}&language=et" id="lang-et-link">{{$transl['est']}}</a>&nbsp;&nbsp;&nbsp;
+        <a href="?cmd={{$cmd}}&language=en" id="lang-en-link">{{$transl['eng']}}</a>
+    </div>
+</footer>
+
 
 </body>
 </html>
